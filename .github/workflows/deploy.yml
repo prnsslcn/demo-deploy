@@ -39,6 +39,9 @@ jobs:
 
       # build 준비
       # chmod +x ./gradlew : 퍼미션 오류 발생 시 처리
+      - name: gradle 권한 변경
+        run:
+          chmod +x ./gradlew
       # ./gradlew clean build
       - name: 단위 테스트 및 빌드
         # 명령어가 여러개면 | 추기
